@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crm.apps.CrmConfig',
+    'polls.apps.PollsConfig',
     # 'nomedoapp.apps.NomedoappConfig'
 ]
 
@@ -118,7 +119,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'projeto\static')
+	# Essa pasta que referencio 'static' não existe naturalmente então
+	# a criamos dentro da aplicação.
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

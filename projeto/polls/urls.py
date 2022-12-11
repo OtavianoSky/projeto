@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import IndexView
+from .views import PollsView
 
 urlpatterns = [
     # path('endereço/', Minhaview.as_view(), name='nome_da_url'),
-    path('inicio/', IndexView.as_view(), name='inicio'),
+    path('votacao/', PollsView.as_view(), name='votacao'),
 
 ]
